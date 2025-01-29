@@ -42,7 +42,7 @@ class TravelingEthiopia:
             return bfs(start)
 if __name__ == "__main__":             
     te = TravelingEthiopia(unweighted_graph)
-    print(te.search("Addis Ababa","Debre Tabor","BFS"))
+    print(te.search("Addisababa","Debretabor","BFS"))
            
 
 

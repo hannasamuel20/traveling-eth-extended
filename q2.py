@@ -42,15 +42,15 @@ class TravelingEthiopia:
             for neigh, next_dist in self.graph[last_city]:
                 if neigh not in visited_cities:
                     new_path = deepcopy(curr_path)
+                    new_visited = deepcopy(visited_cities)
                     new_path.append(neigh)
-                    heapq.heappush(min_heap,(dist+next_dist,new_path,visited_cities,found_goals))
-            return ([], -1)
+                    heapq.heappush(min_heap,(dist+next_dist,new_path,new_visited,found_goals))
+        return ([], -1)
         
 if __name__ == "__main__":
     te = TravelingEthiopia(weighted_graph)
-    print(te.dijkstra("Addis Ababa", "Lalibela"))
-    
-    print(te.customized_dijkstra("Addis Ababa", ["Axum", "Gondar", "Lalibela", "Babile", "Jimma", "Bale", "Sof Oumer", "Arba Minch"]))
+    print(te.dijkstra("Addisababa", "Lalibela"))
+    print(te.customized_dijkstra("Addisababa", ["Axum", "Gondar", "Lalibela", "Babile", "Jimma", "Bale", "Sofoumer", "Arbaminch"]))
 
 
 

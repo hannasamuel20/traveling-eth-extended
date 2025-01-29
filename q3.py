@@ -30,6 +30,6 @@ class TravelingEthiopia:
 
 if __name__ == "__main__":
     te = TravelingEthiopia(weighted_graph,heuristics)
-    print(te.a_star("Addis Ababa","Moyale"))
+    print(te.a_star("Addisababa","Moyale"))
 
     
